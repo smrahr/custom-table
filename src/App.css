@@ -1,38 +1,136 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  /* width: 100%;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center; */
 }
 
-.App-link {
-  color: #61dafb;
+#root {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vertical-title {
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(100% 100%, 0 0, 0 100%);
+  background-color: rgb(223, 221, 221);
+}
+
+.vertical-title::after {
+  content: "برگشت";
+  position: absolute;
+  bottom: 6px;
+  left: 15px;
+  font-size: 12px;
+}
+
+.horizontal-title::after {
+  content: "رفت";
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  font-size: 12px;
+}
+
+.font-en {
+  font-family: "roboto" !important;
+  direction: ltr !important;
+  font-size: 11px !important;
+
+  span {
+    display: inline-block;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.maxNum {
+  color: #dc3545 !important;
+}
+
+.minNum {
+  color: #28a745 !important;
+}
+
+.hover-style {
+  background-color: #f2f9ff !important;
+}
+
+.hover-cell {
+  border: 2px solid #0077db !important;
+  background-color: #c9e3f8 !important;
+}
+
+table {
+  border: 1px solid rgb(223, 221, 221) !important;
+}
+
+th,
+td {
+  border: 1px solid rgb(223, 221, 221) !important;
+  text-align: center !important;
+  max-width: 100px !important;
+  max-height: 50px !important;
+  height: 50px !important;
+  padding: 0 !important;
+}
+
+table,
+tr {
+  width: 80% !important;
+  position: relative;
+}
+
+table > tr:first-child td {
+  border-top: none !important;
+  background-color: #eff1f2;
+}
+
+table tr td:nth-child(1) {
+  background-color: #eff1f2;
+  border-right: none !important;
+}
+
+table > tr:first-child td {
+  position: relative;
+}
+
+table > tr:first-child td:nth-child(1) {
+  border: none !important;
+}
+
+table > tr:first-child td:nth-child(2) {
+  border-right: none !important;
+}
+
+table tr:nth-child(2) td:nth-child(1) {
+  border-top: none !important;
+}
+
+.no-price {
+  background-color: rgba(128, 128, 128, 0.315);
+}
+
+.isMobile {
+  display: none;
+  @media only screen and (max-width: 600px) {
+    display: block;
+  }
+}
+
+.isDesc {
+  display: block;
+  @media only screen and (max-width: 600px) {
+    display: none;
   }
 }
